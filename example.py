@@ -16,7 +16,7 @@ import mlflow
 import mlflow.sklearn
 
 import logging
-dagshub.init(repo_owner='samuel-afful', repo_name='ML-flow-operations', mlflow=True)
+#dagshub.init(repo_owner='samuel-afful', repo_name='ML-flow-operations', mlflow=True)
 
 logging.basicConfig(level=logging.WARN)
 logger = logging.getLogger(__name__)
@@ -78,7 +78,9 @@ if __name__ == "__main__":
       
 
        
-       
+        remote_server_uri = "http://ec2-44-202-229-93.compute-1.amazonaws.com:5000/"
+        mlflow.set_tracking_uri(remote_server_uri)
+
         tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
 
         # Model registry does not work with file store

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/user/Documents/mlflow/mlruns/0/488008d317f34462ab858ea0ac5869ea/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 488008d317f34462ab858ea0ac5869ea
+run_name: classy-quail-681
+run_uuid: 488008d317f34462ab858ea0ac5869ea
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1727715457477
+status: 1
+tags: []
+user_id: user
