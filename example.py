@@ -5,7 +5,7 @@
 import os
 import warnings
 import sys
-
+import dagshub
 import pandas as pd
 import numpy as np
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
@@ -16,6 +16,7 @@ import mlflow
 import mlflow.sklearn
 
 import logging
+dagshub.init(repo_owner='samuel-afful', repo_name='ML-flow-operations', mlflow=True)
 
 logging.basicConfig(level=logging.WARN)
 logger = logging.getLogger(__name__)
@@ -74,6 +75,10 @@ if __name__ == "__main__":
         mlflow.log_metric("r2", r2)
         mlflow.log_metric("mae", mae)
 
+      
+
+       
+       
         tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
 
         # Model registry does not work with file store
